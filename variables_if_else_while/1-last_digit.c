@@ -15,16 +15,16 @@ int main(void)
 	printf(" Last digit of %d is ", n);
 	brahian = n % 10;
 	if (brahian > 5)
-	
+
 	printf("%d and is greater than 5\n", brahian);
-	
+
 	else if (brahian == 0)
-	
+
 	printf("%d and is 0\n", brahian);
-	
+
 	else
-	
+
 	printf("%d and is less than 6 and not 0\n", brahian);
-	
+
 	return (0);
 }
