@@ -12,7 +12,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf(" Last digit of %d is ", n);
+	printf("Last digit of %d is ", n);
 	brahian = n % 10;
 	if (brahian > 5)
 
