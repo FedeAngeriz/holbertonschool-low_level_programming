@@ -2,14 +2,14 @@
 #include <ctype.h>
 
 /**
- * print_alphabet - 3-islower
+ * _islower - 3-islower
+ * @c: minuscula
  *
  * Return: void
  */
 
 int _islower(int c)
 {
-
 
 	if (islower(c))
 	return (1);
