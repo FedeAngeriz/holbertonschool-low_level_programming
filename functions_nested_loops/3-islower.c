@@ -7,7 +7,7 @@
  * Return: void
  */
 
-int islower(int c)
+int _islower(int c)
 {
 
 
