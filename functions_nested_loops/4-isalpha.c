@@ -2,16 +2,16 @@
 #include <ctype.h>
 
 /**
- * print_alphabet - 4-isalpha
+ * _isalpha - 4-isalpha
+ * @c: minuscula
  *
  * Return: void
  */
 
 int _isalpha(int c)
 {
-	
-	if(isalpha(c))
-	return(1);
+	if (isalpha(c))
+	return (1);
 	else
-	return(0);
+	return (0);
 }
