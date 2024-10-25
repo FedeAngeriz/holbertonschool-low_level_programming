@@ -2,19 +2,19 @@
 #include <ctype.h>
 
 /**
- * print_alphabet - 1-alphabet
+ * print_alphabet - 3-islower
  *
  * Return: void
  */
 
-int _islower(int c)
+int islower(int c)
 {
 
 
 	if (islower(c))
 	return (1);
-	else 
-		return(0);
+	else
+	return (0);
 
 
 }
