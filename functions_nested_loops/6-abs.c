@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * abs - 6-abs
- *
+ * _abs - 6-abs
+ * @num: variable
  * Return: void
  */
 
-int _abs(int r);
+int _abs(int num)
 {
-	if ()
-
+	if (num < 0)
+		return (-num);
+	else
+		return (num);
 }
