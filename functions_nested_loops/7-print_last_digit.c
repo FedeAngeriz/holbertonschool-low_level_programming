@@ -12,6 +12,9 @@ int print_last_digit(int num)
 
 	res = num % 10;
 	while (res < 0)
+	{
+		res = -res;
+	}
 		_putchar (res);
 	return (res);
 }
