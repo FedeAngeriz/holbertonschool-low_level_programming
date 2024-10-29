@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - conteo de numeros
- * @n: numero va sumando
+ *
  * Return:
  */
 
