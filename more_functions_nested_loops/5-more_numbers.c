@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * more_numbers
+ * more_numbers - numeros y lineas
  *
- * Return:
+ * Return: numeros
  */
 
 void more_numbers(void)
