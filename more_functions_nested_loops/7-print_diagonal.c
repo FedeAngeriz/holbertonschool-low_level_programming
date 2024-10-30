@@ -2,11 +2,17 @@
 
 /**
  * print_diagonal - imprime diagonal
- *
- *Return:
+ * @n: variable
+ *Return: salta de linea
  */
 
 void print_diagonal(int n)
 {
-	for ()
+	int l;
+
+	for (l = 0; l < n; l++)
+	{
+		_putchar ('\\');
+	}
+	_putchar ('\n');
 }
