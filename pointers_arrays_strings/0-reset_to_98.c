@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- * print_diagonal - imprime diagonal
- * @n: variable
- *Return: salta de linea
+ * reset_to_98 - imprime 98
+ * @n: puntero
  */
 
 void reset_to_98(int *n)
