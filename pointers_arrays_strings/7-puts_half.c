@@ -1,19 +1,34 @@
 #include "main.h"
 
 /**
- * 
- * @
- * Return:
+ * puts_half
+ * @str: puntero
+ * Return: la mitad al final
  */
 
 void puts_half(char *str)
 {
-	int i = *str / 2;
-	int num;
+	int l = 0;
+	char *p = str;
 
-	for (num = i; num < str; num++)
+	while (*p)
 	{
-		_putchar (str[num]);
+		p++;
+		l++;
+	}
+	if (l % 2 == 0)
+	{
+		p = str + l / 2;
+	}
+	else
+	{
+		p = str + (l - 1) / 2 + 1;
+	}
+	
+	while (*p)
+	{
+		_putchar (*p);
+		p++;
 	}
 	_putchar ('\n');
 }
