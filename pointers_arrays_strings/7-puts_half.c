@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts_half
+ * puts_half - imprimir la mitad del string
  * @str: puntero
  * Return: la mitad al final
  */
@@ -24,7 +24,7 @@ void puts_half(char *str)
 	{
 		p = str + (l - 1) / 2 + 1;
 	}
-	
+
 	while (*p)
 	{
 		_putchar (*p);
