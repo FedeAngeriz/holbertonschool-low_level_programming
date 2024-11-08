@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _pow_recursion - 
- * @x:
- * @y:
- *Return:
+ * _pow_recursion - imprimir cuenta exponencial
+ * @x: variable a elevar
+ * @y: variable que eleva
+ *Return: resultado de cuenta elevada
  */
 
 int _pow_recursion(int x, int y)
@@ -19,7 +19,6 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
-		return (x * _pow_recursion (x , y - 1));
+		return (x * _pow_recursion(x, y - 1));
 	}
-
 }
