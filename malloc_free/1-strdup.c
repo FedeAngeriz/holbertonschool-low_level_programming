@@ -2,27 +2,40 @@
 #include <stdlib.h>
 
 /**
- * 
- * @
- *Return: 
+ * _strlen - largo de cadena
+ * @s: puntero
+ * Return: el largo
+ */
+
+int _strlen(char *s)
+{
+	int l;
+
+	for (l = 0; s[l] != '\0'; l++)
+	{
+	}
+	return (l);
+}
+
+/**
+ * _strdup - copia de cadena
+ * @str: puntero
+ * Return: puntero a espacio recienc asignado
  */
 
 char *_strdup(char *str)
 {
-	int largo;
 	char *copia;
 	int num;
 
 	if (str == NULL)
 		return (NULL);
 
-	largo = _strlen(str) + 1;
-
-	copia = malloc(largo * sizeof(char));
+	copia = malloc(_strlen(str) + 1);
 	if (copia == NULL)
 		return (NULL);
 
-	for (num = 0; num < largo - 1; num++)
+	for (num = 0; str[num] != '\0'; num++)
 	{
 		copia[num] = str[num];
 	}
