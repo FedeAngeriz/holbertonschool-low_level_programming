@@ -35,7 +35,7 @@ int **alloc_grid(int width, int height)
 			{
 				free(asignar[fila]);
 			}
-			free(asignar[columna]);
+			free(asignar);
 			return (NULL);
 		}
 
