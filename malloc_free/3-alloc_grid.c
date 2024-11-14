@@ -29,7 +29,7 @@ int **alloc_grid(int width, int height)
 	{
 		asignar[columna] = malloc(width * sizeof(int));
 
-		if (asignar == NULL)
+		if (asignar[columna] == NULL)
 		{
 			for (fila = 0; fila < width; fila++)
 			{
@@ -41,7 +41,7 @@ int **alloc_grid(int width, int height)
 
 		for (fila = 0; fila < width; fila++)
 		{
-			asignar[fila][columna] = 0;
+			asignar[columna][fila] = 0;
 		}
 	}
 	return (asignar);
