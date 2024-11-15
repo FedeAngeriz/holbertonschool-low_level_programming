@@ -12,10 +12,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int *matriz;
 
-	matriz = malloc(nmemb);
-
 	if (nmemb == 0 || size == 0)
 		return (NULL);
+
+	matriz = malloc(nmemb * size);
+
 	if (matriz == NULL)
 		return (NULL);
 	return (matriz);
