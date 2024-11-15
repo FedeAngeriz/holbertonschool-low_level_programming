@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	int *memoria;
 
-	memoria = malloc((b) + 1);
+	memoria = malloc(b);
 
 	if (memoria == NULL)
 	{
