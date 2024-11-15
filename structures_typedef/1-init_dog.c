@@ -1,12 +1,12 @@
 #include "dog.h"
 
 /**
- * init_dog
- * @d:
- * @name:
- * @age:
- * @owner:
- * Return:
+ * init_dog - inicializar variables
+ * @d: puntero
+ * @name: variable a inicializar
+ * @age: variable a inicializar
+ * @owner: variable a inicializar
+ * Return: variables inicializadas con datos
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
