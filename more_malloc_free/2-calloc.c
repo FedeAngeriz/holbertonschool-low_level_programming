@@ -20,7 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (matriz == NULL)
 		return (NULL);
 	
-	memset(memoria, 0, nmemb * size);
+	memset(matriz, 0, nmemb * size);
 
 	return (matriz);
 }
