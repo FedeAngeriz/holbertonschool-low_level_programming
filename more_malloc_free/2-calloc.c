@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * _calloc - asignar memoria a una matriz
  * @nmemb: cantidad de elementos de la matriz
@@ -19,5 +19,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (matriz == NULL)
 		return (NULL);
+	
+	memset(memoria, 0, nmemb * size);
+
 	return (matriz);
 }
