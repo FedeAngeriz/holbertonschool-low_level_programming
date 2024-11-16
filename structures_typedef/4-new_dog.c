@@ -5,17 +5,6 @@
 #include <string.h>
 
 /**
- * dog: nuevo perro
- */
-
-typedef struct new_dog
-{
-	char *name;
-	float age;
-	char *owner;
-} dog_t;
-
-/**
  * new_dog - imprimir nueva estructura de dog
  * @name: variable nombre
  * @age: variable edad
@@ -23,7 +12,7 @@ typedef struct new_dog
  * Return: si es NULL, nil, si no, el parametro dado
  */
 
-struct dog_t *new_dog(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_perro;
 
@@ -35,7 +24,7 @@ struct dog_t *new_dog(char *name, float age, char *owner)
 	if (name == NULL)
 		name = "";
 
-	new_perro->name = malloc(_strlen(name) + 1);
+	new_perro->name = malloc(strlen(name) + 1);
 
 	if (new_perro->name == NULL)
 	{
@@ -48,7 +37,7 @@ struct dog_t *new_dog(char *name, float age, char *owner)
 	if (owner == NULL)
 		owner = "";
 
-	new_perro->owner = malloc(_strlen(owner) + 1);
+	new_perro->owner = malloc(strlen(owner) + 1);
 
 	if (new_perro->owner == NULL)
 	{
