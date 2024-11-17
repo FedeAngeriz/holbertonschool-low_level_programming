@@ -5,6 +5,23 @@
 #include <string.h>
 
 /**
+ * _strlen - largo del strings
+ * @s: puntero
+ *Return: largo de la cadena
+ */
+
+int _strlen(char *s)
+{
+	int num = 0, l;
+
+	for (l = 0; s[l] != '\0'; l++)
+	{
+		num++;
+	}
+	return (num);
+}
+
+/**
  * new_dog - imprimir nueva estructura de dog
  * @name: variable nombre
  * @age: variable edad

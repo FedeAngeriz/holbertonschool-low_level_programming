@@ -2,6 +2,7 @@
 #define DOG_H
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
  * struct dog - nueva estructura
@@ -19,6 +20,7 @@ typedef struct dog
 
 dog_t;
 
+int _strlen(char *s);
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
