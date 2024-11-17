@@ -22,6 +22,28 @@ int _strlen(char *s)
 }
 
 /**
+ * _strcpy - copia string a otro
+ * @dest: puntero destino
+ * @src: puntero salida
+ *Return: retorna lo mismo de los 2 punteros
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	char *p = dest;
+	int i = 0;
+
+	while (src[i] != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+	return (p);
+}
+
+/**
  * new_dog - imprimir nueva estructura de dog
  * @name: variable nombre
  * @age: variable edad
@@ -49,7 +71,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	strcpy(new_perro->name, name);
+	_strcpy(new_perro->name, name);
 
 	if (owner == NULL)
 		owner = "";
@@ -63,7 +85,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	strcpy(new_perro->owner, owner);
+	_strcpy(new_perro->owner, owner);
 
 	new_perro->age = age;
 
