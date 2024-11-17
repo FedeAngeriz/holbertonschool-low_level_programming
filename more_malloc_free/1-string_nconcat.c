@@ -29,20 +29,14 @@ int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *copia;
-	int num, num2, fin;
+	int num, num2, fin = n;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
-
-	if (n < (_strlen(s2)))
+	if (fin < (_strlen(s2)))
 	{
-		fin = n;
 		copia = malloc(_strlen(s1) + _strlen(s2) + 1);
 	}
 	else
@@ -50,24 +44,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		fin = _strlen(s2);
 		copia = malloc(n + _strlen(s1) + 1);
 	}
-	
 	if (copia == NULL)
 		return (NULL);
-
 	for (num = 0; num < _strlen(s1); num++)
 		copia[num] = s1[num];
-
-	if (n < (_strlen(s2)))
+	if (fin < (_strlen(s2)))
 	{
 		for (num2 = 0; num2 < fin; num2++)
 			copia[num + num2] = s2[num2];
 	}
 	else
 	{
-		for (num2 = 0; num2 < n; num2++)
-		{
+		for (num2 = 0; num2 < fin; num2++)
 			copia[num + num2] = s2[num2];
-		}
 	}
 	copia[num + num2] = '\0';
 	return (copia);
