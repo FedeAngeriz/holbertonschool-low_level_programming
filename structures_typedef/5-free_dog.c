@@ -4,17 +4,17 @@
 /**
  * free_dog - liberacion de memoria de perros
  * @d: puntero
- *Return: deja toda la memoria liberada
+ * Return: deja toda la memoria liberada
  */
 
 void free_dog(dog_t *d)
 {
-	int i = 0;
+	if (d == NULL)
+		return;
 
-	while(*d)
-	{
-		i++;
-		free(d[i]);
-	}
+	if (d->name != NULL)
+		free(d->name);
+	if (d->owner != NULL)
+		free(d->owner);
 	free(d);
 }
