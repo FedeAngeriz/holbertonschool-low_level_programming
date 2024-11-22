@@ -20,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		cadena = va_arg(args, char *);
 
 		if (cadena == NULL)
-			printf("(nill)");
+			printf("(nil)");
 		else
 			printf("%s", cadena);
 
