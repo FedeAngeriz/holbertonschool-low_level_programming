@@ -10,16 +10,25 @@ void print_all(const char * const format, ...)
 
 	while (format && format[i])
 	{
-		while (format[i])
-		cadena = va_arg(args, char *);
+		switch (format[i])
+		{
+			case 'c':
+				printf("%c", va_arg(args, int));
+			case 'i':
+				printf("%i", va_arg(args, int));
+			case 'f':
+				printf("%f", va_arg(args, double));
+			case 's':
+				cadena = va_arg(args, char *);
 
-		if (format == NULL)
-			printf("(nill)");
-		else
-			printf("%s", format);
+			if (cadena == NULL)
+				printf("(nil)");
+			else
+				printf("%s", cadena);
+		}
 
-		if (format != NULL && i < tipo - 1)
-			printf("%s", format);
+		if (format[i + 1] != '\0' && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
+			printf(", ");
 	i++;
 	}
 	va_end(args);
