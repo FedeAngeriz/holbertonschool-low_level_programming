@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	}
 
 	num1 = atoi(argv[1]);
-	num2 = atoi(argv[4]);
+	num2 = atoi(argv[3]);
 	operador = get_op_func(argv[2]);
 	
 	if (operador == NULL)
