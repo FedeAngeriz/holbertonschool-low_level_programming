@@ -14,7 +14,7 @@ void free_list(list_t *head)
 	{
 		recorre = head;
 		head = head->next;
+		free(recorre->str);
+		free(recorre);
 	}
-	free(recorre->str);
-	free(recorre);
 }
