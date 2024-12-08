@@ -14,6 +14,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *recorre = *h;
 	unsigned int contador;
 
+	if (h == NULL)
+		return (NULL);
+
 	if (newNodo == NULL)
 		return (NULL);
 
@@ -30,13 +33,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (newNodo);
 	}
 
-	for (contador = 0; contador < idx - 1 && recorre != NULL; ++contador)
+	for (contador = 0; contador < idx - 1 && recorre != NULL; contador++)
 		recorre = recorre->next;
 
 	if (recorre == NULL)
 	{
 		free(newNodo);
-		return (*h);
+		return (NULL);
 	}
 
 	newNodo->prev = recorre;
@@ -46,5 +49,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (newNodo->next != NULL)
 		newNodo->next->prev = newNodo;
 
-	return (*h);
+	return (newNodo);
 }
